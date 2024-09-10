@@ -1,0 +1,2 @@
+# elastic-rag
+Elastic Serverless 
