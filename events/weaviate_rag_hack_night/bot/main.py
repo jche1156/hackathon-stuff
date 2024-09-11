@@ -3,7 +3,10 @@ import re
 import writer as wf
 import writer.ai
 import pandas as pd
+import os
 
+from dotenv import load_dotenv
+load_dotenv()
 
 # # Welcome to Writer Framework! 
 # # This template is a starting point for your AI apps.
@@ -29,7 +32,7 @@ def preprocess_movie_name(movie_name):
 def fetch_movie_reviews(movie_name):
     movie_name = preprocess_movie_name(movie_name)
    
-    api_key = "35d01f97a261a67102c0e74e51111487"  
+    api_key = os.getenv('API_KEY');
     url = f"https://api.diffbot.com/v3/article?url=https://www.rottentomatoes.com/m/{movie_name}&token={api_key}"
     
     try:
