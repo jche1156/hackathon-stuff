@@ -44,22 +44,6 @@ def fetch_movie_reviews(movie_name):
     except Exception as e:
         return {"error": str(e)}
 
-def fetch_movie_reviews(movie_name):
-    movie_name = preprocess_movie_name(movie_name)
-   
-    api_key = "35d01f97a261a67102c0e74e51111487"  
-    url = f"https://api.diffbot.com/v3/article?url=https://www.rottentomatoes.com/m/{movie_name}&token={api_key}"
-    
-    try:
-        response = requests.get(url)
-        if response.status_code == 200:
-            return response.json()
-        else:
-            return {f"Diffbot failed this time... Error {response.status_code}"}
-    except Exception as e:
-        return {"error": str(e)}
-
-
 def split_reviews(review_text):
     review_pattern = r'([A-Za-z\s.]+)\s([A-Za-z\s.]+)\s(.*?)(?:\sRated: ([A-Za-z0-9+/.]+))?\s•\s([A-Za-z\s0-9,]+)\sFull Review'
     matches = re.findall(review_pattern, review_text)
