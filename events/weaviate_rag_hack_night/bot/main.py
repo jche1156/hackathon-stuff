@@ -4,6 +4,7 @@ import writer as wf
 import writer.ai
 import pandas as pd
 import os
+import dotenv
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -20,7 +21,7 @@ wf.init_state({
     "posts": "",
     "topic": "movie reviews",
     "message": "",
-    "movie_name": "Watchmen",
+    "movie_name": "",
     "image": ""
 })
 

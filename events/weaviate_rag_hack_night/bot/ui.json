@@ -75,7 +75,8 @@
             "id": "u0us2hvyghbw5jky",
             "type": "textinput",
             "content": {
-                "label": ""
+                "label": "",
+                "placeholder": "John Wick"
             },
             "isCodeManaged": false,
             "position": 0,
@@ -113,11 +114,11 @@
                 "message": "@{message}"
             },
             "isCodeManaged": false,
-            "position": 3,
+            "position": 2,
             "parentId": "ejpasds0o8qyjs1n",
             "handlers": {},
             "visible": {
-                "expression": "custom",
+                "expression": true,
                 "binding": "message",
                 "reversed": false
             }
@@ -134,8 +135,8 @@
             "handlers": {},
             "visible": {
                 "expression": "custom",
-                "binding": "post",
-                "reversed": true
+                "binding": "posts",
+                "reversed": false
             }
         },
         "lzeku8po6rlx1afp": {
@@ -147,7 +148,12 @@
             "isCodeManaged": false,
             "position": 0,
             "parentId": "q08vivzxuuk236qa",
-            "handlers": {}
+            "handlers": {},
+            "visible": {
+                "expression": true,
+                "binding": "",
+                "reversed": false
+            }
         },
         "vp1cybduzph9i4im": {
             "id": "vp1cybduzph9i4im",
@@ -178,7 +184,7 @@
                 "caption": ""
             },
             "isCodeManaged": false,
-            "position": 2,
+            "position": 3,
             "parentId": "ejpasds0o8qyjs1n",
             "handlers": {}
         }
