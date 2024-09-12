@@ -142,6 +142,80 @@
             "position": 4,
             "parentId": "c6392876-7cfd-4680-8725-b04f43ff294f"
         },
+        "fbad9feb-5c88-4425-bb17-0d138286a875": {
+            "id": "fbad9feb-5c88-4425-bb17-0d138286a875",
+            "type": "sidebar",
+            "content": {
+                "startCollapsed": "yes"
+            },
+            "isCodeManaged": false,
+            "position": -2,
+            "parentId": "bb4d0e86-619e-4367-a180-be28ab6059f4"
+        },
+        "7e625201-20c2-4b05-951c-d825de28b216": {
+            "id": "7e625201-20c2-4b05-951c-d825de28b216",
+            "type": "section",
+            "content": {
+                "title": "Filter data"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "fbad9feb-5c88-4425-bb17-0d138286a875"
+        },
+        "385247e5-5c89-4352-a598-b8da81146a5a": {
+            "id": "385247e5-5c89-4352-a598-b8da81146a5a",
+            "type": "sliderinput",
+            "content": {
+                "label": "Minimum weight",
+                "minValue": "300",
+                "maxValue": "600",
+                "stepSize": "1"
+            },
+            "isCodeManaged": false,
+            "position": 1,
+            "parentId": "7e625201-20c2-4b05-951c-d825de28b216",
+            "binding": {
+                "eventType": "wf-number-change",
+                "stateRef": "filter.min_weight"
+            }
+        },
+        "10c156df-7464-4889-8b69-1b54cb1ee80a": {
+            "id": "10c156df-7464-4889-8b69-1b54cb1ee80a",
+            "type": "sliderinput",
+            "content": {
+                "label": "Minimum length",
+                "minValue": "25",
+                "maxValue": "35",
+                "stepSize": "1"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "7e625201-20c2-4b05-951c-d825de28b216",
+            "binding": {
+                "eventType": "wf-number-change",
+                "stateRef": "filter.min_length"
+            }
+        },
+        "70d82458-a08f-4005-8f96-dc8d3ba92fad": {
+            "id": "70d82458-a08f-4005-8f96-dc8d3ba92fad",
+            "type": "section",
+            "content": {
+                "title": "About this app"
+            },
+            "isCodeManaged": false,
+            "position": 1,
+            "parentId": "fbad9feb-5c88-4425-bb17-0d138286a875"
+        },
+        "12e11005-3b5e-4bd8-9a8c-fc7b8cb757d0": {
+            "id": "12e11005-3b5e-4bd8-9a8c-fc7b8cb757d0",
+            "type": "text",
+            "content": {
+                "text": "This app is meant to serve as a lighthearted introduction to the framework. It's not a comprehensive demonstration of its capabilities."
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "70d82458-a08f-4005-8f96-dc8d3ba92fad"
+        },
         "7b710d37-1c68-4d06-a65a-e6596ccc826a": {
             "id": "7b710d37-1c68-4d06-a65a-e6596ccc826a",
             "type": "text",
@@ -1100,6 +1174,17 @@
             "isCodeManaged": false,
             "position": 3,
             "parentId": "9c30af6d-4ee5-4782-9169-0f361d67fa76"
+        },
+        "vparfbc3jvki1g09": {
+            "id": "vparfbc3jvki1g09",
+            "type": "pagination",
+            "parentId": "bb4d0e86-619e-4367-a180-be28ab6059f4",
+            "content": {
+                "page": "1",
+                "pageSizeOptions": ""
+            },
+            "handlers": {},
+            "position": 2
         }
     }
 }

@@ -7,7 +7,8 @@ import writer as wf
 from writer.core import WriterState
 
 # EVENT HANDLERS
-
+def handle_timer_tick(state: WriterState):
+    pass
 def handle_timer_tick(state: WriterState):
     df = state["random_df"]
     for i in range(5):
@@ -22,6 +23,9 @@ def update(state, session):
     state['main_df'] = main_df
 
     paginated_members = _get_paginated_members(state['paginated_members_page'] - 1, state['paginated_members_page_size'])
+    paginated_members["Byte"]["role"] = "Rocks!"
+    paginated_members["Byte"]["name"] = "Weaviate"
+    print(paginated_members)
     state['paginated_members'] = paginated_members
     state["session"] = session
     _update_metrics(state)
@@ -145,7 +149,8 @@ initial_state = wf.init_state({
         "min_length": 25,
         "min_weight": 300,
     },
-    "metrics": {}
+    "metrics": {},
+    "new_president": "Jose",
 })
 
 update(initial_state, None)
