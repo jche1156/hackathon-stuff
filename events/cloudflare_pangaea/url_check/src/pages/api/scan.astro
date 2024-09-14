@@ -1,0 +1,45 @@
+---
+export const partial = true;
+import Layout from "@layouts/Layout.astro";
+/* eslint-disable no-console */
+
+import { PangeaConfig, URLIntelService, PangeaErrors } from "pangea-node-sdk";
+const test_url = "https://www.recipetineats.com/filipino-chicken-adobo-flavour-kapow/"
+const domain = "aws.us.pangea.cloud";
+const token = "pts_6hdyw723p2qqp2nxkbuujdwgo3yimmt2";
+const config = new PangeaConfig({ domain: domain });
+const urlIntel = new URLIntelService(String(token), config);
+const data = await Astro.request;
+function printData(indicator, data) {
+  console.log(`\t Indicator: ${indicator}`);
+  console.log(`\t\t Verdict: ${data.verdict}`);
+  console.log(`\t\t Score: ${data.score}`);
+  console.log(`\t\t Category: ${data.category}`);
+}
+let cf_data = {};
+
+console.log("Checking url...");
+const indicator = "http://113.235.101.11:54384";
+const options = { provider: "crowdstrike", verbose: true, raw: true };
+try {
+  const response = await urlIntel.reputation(indicator, options);
+
+  console.log("Result: ");
+  printData(indicator, response.result.data);
+  cf_data = response.result.data;
+} catch (e) {
+  if (e instanceof PangeaErrors.APIError) {
+    console.log("Error", e.summary, e.errors);
+  } else {
+    console.log("Error: ", e);
+  }
+}
+
+let word = "hi";
+---
+
+<p>
+{indicator}<br />
+{JSON.stringify(cf_data)}
+{JSON.stringify(data)}
+</p>
