@@ -169,7 +169,9 @@
             "type": "text",
             "content": {
                 "text": "@{posts}",
-                "useMarkdown": "yes"
+                "useMarkdown": "yes",
+                "alignment": "left",
+                "cssClasses": "font-size: 22px;"
             },
             "isCodeManaged": false,
             "position": 2,
