@@ -1,0 +1,27 @@
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What Should Tech Workshops and Hackathons Serve Instead of Pizza?</title>
+</head>
+
+<body>
+  <main>
+    <h1><span>What Should Tech Workshops and Hackathons Serve Instead of Pizza?</span></h1>
+    <section class="text">
+      <h3 id="affirmation">Loading...</h3>
+    </section>
+    <button id="getNewAffirmation" disabled>Another Dish</button>
+  </main>
+  <script type="module" src="/main.js"></script>
+  <script>
+    function autoClickButton() {
+      document.getElementById('getNewAffirmation').click();
+    }
+
+    setInterval(autoClickButton, 4500);
+  </script>
+</body>
+
+</html>
